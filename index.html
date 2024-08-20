@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Boutique Elegante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    header h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 3rem;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .slider {
+        width: 60%;
+        height: 300px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .slides {
+        width: 300%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .slides input {
+        display: none;
+    }
+    
+    .slide {
+        width: 33.33%;
+        transition: 1s;
+    }
+    
+    .slide img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .navigation-manual {
+        position: absolute;
+        width: 100%;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .manual-btn {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0 10px;
+    }
+    
+    .manual-btn:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    .manual-btn:hover {
+        background: #fff;
+    }
+    
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-left: -33.33%;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-left: -66.66%;
+    }
+    
+    .navigation-auto {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: -90px;
+    }
+    
+    .auto-btn1, .auto-btn2, .auto-btn3 {
+        border: 2px solid #fff;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0 10px;
+    }
+    
+    section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .collection-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+    
+    .collection-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    form label {
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Boutique</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#collections">Colecciones</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <div class="slide first">
+                    <img src="Zapatos de tacón.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="Sombrero de verano.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="Jumpsuit.jpg" alt="Slide 3">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+
+    <section id="collections">
+        <h2>Nuestras Colecciones</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="Vestido elegante.jpg" alt="Producto 1">
+                <h3>Vestido Elegante</h3>
+                <p>Perfecto para ocasiones especiales.</p>
+            </div>
+            <div class="collection-item">
+                <img src="Bolso de cuero.jpg" alt="Producto 2">
+                <h3>Bolso de Cuero</h3>
+                <p>Ideal para un estilo sofisticado.</p>
+            </div>
+            <div class="collection-item">
+                <img src="Conjunto.jpg" alt="Producto 2">
+                <h3>Jumpsuit</h3>
+                <p>Ideal para una celebracion familiar.</p>
+            </div>
+            <div class="collection-item">
+                <img src="Playa.jpg" alt="Producto 2">
+                <h3>Conjunto de verano</h3>
+                <p>Perfecto para tu salida de verano.</p>
+            </div>
+            <div class="collection-item">
+                <img src="Formal.jpg" alt="Producto 2">
+                <h3>Vestido esmeralda</h3>
+                <p>Ideal para un estilo sofisticado.</p>
+            </div>
+            <div class="collection-item">
+                <img src="Berschka.jpg" alt="Producto 2">
+                <h3>Short tiro alto</h3>
+                <p>Ideal para un dia de playa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Boutique. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
